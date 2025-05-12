@@ -5,8 +5,8 @@ import {HEADER_SECTION} from "../../constants";
 export default class Header {
     readonly rootElement: Locator;
 
-    constructor(headerRootElm: Locator) {
-        this.rootElement = headerRootElm;
+    constructor(rootElement: Locator) {
+        this.rootElement = rootElement;
     }
 
     /**

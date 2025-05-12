@@ -6,9 +6,9 @@ export abstract class BaseHeaderSection {
     readonly subMenu: Locator;
     readonly mainButton: Locator;
 
-    protected constructor(sectionName: string, sectionRootElement: Locator) {
+    protected constructor(sectionName: string, rootElement: Locator) {
         this.sectionName = sectionName;
-        this.rootElement = sectionRootElement;
+        this.rootElement = rootElement;
         this.subMenu = this.rootElement.locator('> .main-navigation__submenu');
         this.mainButton = this.rootElement.getByRole('button', { name: this.sectionName });
     }

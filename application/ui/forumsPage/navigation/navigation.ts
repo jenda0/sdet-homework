@@ -4,8 +4,8 @@ export default class Navigation {
     readonly rootElement: Locator;
     readonly registerButton: Locator;
 
-    constructor(navigationRootElm: Locator) {
-        this.rootElement = navigationRootElm;
+    constructor(rootElement: Locator) {
+        this.rootElement = rootElement;
         this.registerButton = this.rootElement.getByRole('menuitem', { name: 'Register' });
     }
 }
