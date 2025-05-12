@@ -40,7 +40,7 @@ test('VEE-T1 - Forum registration with public domain email', async ({landingPage
         await expect(async () => {
             await forumsPage.agreement.agree.click();
             await expect(forumsPage.register.rootElement, 'Register Form page should be visible').toBeVisible({timeout: 200});
-        }).toPass();
+        }, 'Click on Agree should open Registration Form page').toPass();
         await forumsPage.waitForRegisterPageToLoad();
     });
 
