@@ -15,7 +15,7 @@ export default class Header {
      * @private
      * @returns {Locator}
      */
-    private _sectionRootElement(SECTION_NAME: string): Locator {
+    private sectionRootElement(SECTION_NAME: string): Locator {
         return this.rootElement.locator(`.main-navigation__item:has(button.main-navigation__item-title:text("${SECTION_NAME}"))`);
     }
 
@@ -24,6 +24,6 @@ export default class Header {
      * @returns {Support}
      */
     get support(): Support {
-        return new Support(HEADER_SECTION.SUPPORT, this._sectionRootElement(HEADER_SECTION.SUPPORT));
+        return new Support(HEADER_SECTION.SUPPORT, this.sectionRootElement(HEADER_SECTION.SUPPORT));
     }
 }

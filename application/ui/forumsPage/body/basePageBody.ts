@@ -7,6 +7,10 @@ export abstract class BasePageBody {
         this.rootElement = rootElement;
     }
 
+    /**
+     * Get the error message element
+     * @returns {Locator}
+     */
     get errorMessage(): Locator {
         return this.rootElement.locator('dd.error');
     }

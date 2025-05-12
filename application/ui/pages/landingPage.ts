@@ -18,18 +18,34 @@ export class LandingPage {
         this.messengerPromptElement = this.rootElement.locator('iframe[title="Qualified Messenger"]');
     }
 
+    /**
+     * Gets the Header element
+     * @returns {Header}
+     */
     get header(): Header {
         return new Header(this.headerElement);
     }
 
+    /**
+     * Gets the Cookies Dialog element
+     * @returns {CookiesDialog}
+     */
     get cookiesDialog(): CookiesDialog {
         return new CookiesDialog(this.cookiesDialogElement);
     }
 
+    /**
+     * Gets the Messenger Prompt element
+     * @returns {MessengerPrompt}
+     */
     get messengerPrompt(): MessengerPrompt {
         return new MessengerPrompt(this.messengerPromptElement);
     }
 
+    /**
+     * Navigates to the landing page
+     * @returns {Promise<void>}
+     */
     async goto(): Promise<void> {
         await this.page.goto('/');
     }

@@ -9,7 +9,13 @@ export abstract class BaseListOfLinks {
         this.rootElement = rootElement;
     }
 
-    protected linkElement(linkText: string): Locator {
+    /**
+     * Get the link element by its title
+     * @protected
+     * @param {string} linkText
+     * @returns {Locator}
+     */
+    linkElement(linkText: string): Locator {
         return this.rootElement.locator('.list-of-links__link', { hasText: linkText });
     }
 }
